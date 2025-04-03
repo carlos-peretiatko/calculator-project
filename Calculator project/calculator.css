@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    background-image: url('https://img.myloview.com.br/posters/calculo-avancado-no-quadro-branco-700-102910143.jpg');
+}
+.calculadora {
+    width: 250px;
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+.tela {
+    width: 92%;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #f4f4f4;
+    
+}
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    border-top: 10px solid #333;
+}
+button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    background: #555;
+    color: white;
+    border-radius: 5px;
+}
+button:active {
+    background: #777;
+}
+.igual {
+    grid-area: span 2;
+    grid-column-start: 4;
+}
+.ponto{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+.apaga{
+    grid-area: span 2;
+    grid-column-start: 3 / 2;
+}
+.mais{
+    grid-column: span 2;
+}
