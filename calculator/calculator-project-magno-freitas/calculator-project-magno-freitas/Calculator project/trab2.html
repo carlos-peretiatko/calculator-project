@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>albert eisntein</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://wallpapers.com/images/hd/beautiful-minecraft-pink-mountain-jeiwb83n9yvg474y.jpg);
+            height: 100vh;
+            margin: 0;
+            width: 100%; /* Added width property */
+            color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            zoom: 130%;
+            
+        }
+        .calculadora {
+            width: 250px;
+            background: #333;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .tela {
+            width: 93%;
+            height: 40px;
+            font-size: 1.5em;
+            text-align: right;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+
+            
+            
+            color: rgb(25, 212, 0);
+        }
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            border-top: 10px solid #333;
+        }
+        button {
+            padding: 15px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            background: #555;
+            color: white;
+            border-radius: 10px; /* Updated border-radius */
+        }
+        button:active {
+            background: #777;
+        }
+        .igual {
+            grid-column: 4;
+            grid-row: 4 / span 2;
+            
+            height: 100%;
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculadora">
+        <input type="text" class="tela" id="tela" disabled>
+        <div class="botoes">
+            <button onclick="adicionar('7')">7</button>
+            <button onclick="adicionar('8')">8</button>
+            <button onclick="adicionar('9')">9</button>
+            <button onclick="limpar()">C</button>
+            <button onclick="adicionar('4')">4</button>
+            <button onclick="adicionar('5')">5</button>
+            <button onclick="adicionar('6')">6</button>
+            <button onclick="adicionar('x')">x</button>
+            <button onclick="adicionar('1')">1</button>
+            <button onclick="adicionar('2')">2</button>
+            <button onclick="adicionar('3')">3</button>
+            <button onclick="adicionar('-')">-</button>
+            <button onclick="adicionar('.')">.</button>
+            <button onclick="adicionar('0')">0</button>
+            <button onclick="adicionar('/')">/</button>
+            <button onclick="adicionar('+')">+</button>
+            <button onclick="calcular()" class="igual">=</button>
+        </div>
+    </div>
+    <script>
+        function adicionar(valor) {
+            document.getElementById("tela").value += valor;
+        }
+        function calcular() {
+            try {
+                document.getElementById("tela").value = eval(document.getElementById("tela").value);
+            } catch {
+                document.getElementById("tela").value = "Erro";
+            }
+        }
+        function limpar() {
+            document.getElementById("tela").value = "";
+        }
+        document.addEventListener('keydown', function(event) {
+    const key = event.key;
+    
+    // Numbers and operators
+    if (/[0-9.+\-*/]/.test(key)) {
+        adicionar(key);
+    }
+    // Enter key for calculation
+    else if (key === 'Enter') {
+        calcular();
+    }
+    // Escape key for clear
+    else if (key === 'Escape') {
+        limpar();
+    }
+    
+    // Handle Backspace key
+    else if (key === 'Backspace') {
+        let tela = document.getElementById("tela");
+        tela.value = tela.value.slice(0, -1);
+        event.preventDefault();
+    }
+    
+    // Prevent default behavior for calculator keys
+    if (/[0-9.+\-*/xX]/.test(key) || key === 'Enter' || key === 'Escape') {
+        event.preventDefault();
+    }
+});
+    </script>
+</body>
+</html> 
