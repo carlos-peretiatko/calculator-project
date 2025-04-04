@@ -4,13 +4,12 @@ Seguem alguns artigos para apoiar na construção do trabalho:
 
 ## Como criar uma calculadora com HTML e CSS:
 
-https://www.geeksforgeeks.org/html-calculator/
-https://www.cssacademy.com/blog/create-a-calculator-in-html-and-css
-https://medium.com/@sharathchandark/how-to-create-a-calculator-usinghtml-css-javascript-simple-calculator-in-javascript-f88c264de03a
-eval():
-https://www.w3schools.com/jsref/jsref_eval.asp
-https://developer.mozilla.org/enUS/docs/Web/JavaScript/Reference/Global_Objects/eval
-https://stackoverflow.com/questions/197769/when-is-javascripts-eval-not-evil
+[Geeks for geeks](https://www.geeksforgeeks.org/html-calculator/)<br>
+[Css academy](https://www.cssacademy.com/blog/create-a-calculator-in-html-and-css)<br>
+[Medium](https://medium.com/@sharathchandark/how-to-create-a-calculator-usinghtml-css-javascript-simple-calculator-in-javascript-f88c264de03a)<br>
+[W3schools](https://www.w3schools.com/jsref/jsref_eval.asp)<br>
+[Developer mozilla](https://developer.mozilla.org/enUS/docs/Web/JavaScript/Reference/Global_Objects/eval)<br>
+[Stack overflow](https://stackoverflow.com/questions/197769/when-is-javascripts-eval-not-evil)<br>
 
 ## Objetivo
 
